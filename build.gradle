@@ -52,3 +52,20 @@ project(':persistence-hero') {
 	   }
    }
 }
+
+project(':integration-tests') {
+	dependencies {
+		testCompile 'com.intuit.karate:karate-junit4:0.8.0'
+    	testCompile 'com.intuit.karate:karate-apache:0.8.0'
+	}
+	
+	sourceSets {
+	    test {
+	        resources {
+	            srcDir file('src/test/java')
+	            exclude '**/*.java'
+	        }
+    }
+}
+}
+
